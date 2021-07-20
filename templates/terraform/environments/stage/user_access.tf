@@ -237,7 +237,7 @@ locals {
         "replicasets", "horizontalpodautoscalers", "horizontalpodautoscalers/status",
         "ingresses", "services", "serviceaccounts",
         "poddisruptionbudgets",
-        "secrets"
+        "secrets", "externalsecrets"
       ]
     }
   ]
@@ -263,7 +263,7 @@ locals {
       verbs      = ["exec", "create", "list", "get", "delete", "patch", "update", "watch"]
       api_groups = ["*"]
       resources = ["deployments", "configmaps", "pods", "pods/exec", "pods/log", "pods/status", "pods/portforward",
-        "nodes", "jobs", "cronjobs", "statefulsets", "secrets", "services", "daemonsets", "endpoints", "namespaces", "events", "ingresses",
+        "nodes", "jobs", "cronjobs", "statefulsets", "secrets", "externalsecrets", "services", "daemonsets", "endpoints", "namespaces", "events", "ingresses",
         "horizontalpodautoscalers", "horizontalpodautoscalers/status",
         "poddisruptionbudgets", "replicasets", "replicationcontrollers"
       ]
@@ -278,7 +278,7 @@ locals {
       resources = ["deployments", "configmaps", "pods", "pods/log", "pods/status",
         "jobs", "cronjobs", "services", "daemonsets", "endpoints", "namespaces", "events", "ingresses",
         "horizontalpodautoscalers", "horizontalpodautoscalers/status",
-        "poddisruptionbudgets", "replicasets"
+        "poddisruptionbudgets", "replicasets", "externalsecrets"
       ]
     },
     {
